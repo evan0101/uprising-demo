@@ -1,0 +1,144 @@
+.header-bg {
+  width: 100%;
+  height: 162px;
+  display: flex;
+  background: transparent
+  linear-gradient(105deg, rgba(127, 0, 255, 1) 0%, rgba(225, 0, 255, 0.7) 100%) 0% 0%
+  no-repeat padding-box;
+  background-size: cover;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+}
+
+.header-container {
+  width: 100%;
+  
+  &.gradient {
+    background: transparent
+    linear-gradient(105deg, rgba(127, 0, 255, 1) 0%, rgba(225, 0, 255, 0.7) 50%, rgba(225, 0, 255, 0.1) 70%) 0% 0%
+    no-repeat padding-box;
+  }
+    
+  height: 162px;
+  display: flex;
+  justify-content: center;
+
+  .player {
+    display: none;
+    overflow: hidden;
+    margin-right: 24px;
+    img {
+      margin-top: 14px;
+      height: 180px;
+    }
+  }
+}
+
+.header {
+  display: flex;
+
+  width: $content-width;
+  max-width: $max-content-width;
+
+  .data {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main {
+    display: flex;
+  }
+  .sub {
+    margin-top: 8px;
+    display: flex;
+  }
+  .block {
+    border-radius: 5px;
+    padding: 8px;
+    background: rgba(34, 34, 34, 0.4);
+    color: #fff;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+
+
+   
+
+    svg {
+      margin-right: 8px;
+      height: 16px;
+      width: 16px;
+    }
+
+    .icon {
+      margin-right: 8px;
+    }
+
+    h2 {
+      font-size: 12px;
+      font-family: "Roboto", sans-serif;
+      &.OWNER {
+        border: 2px solid red;
+        padding: 2px 4px;
+        display: inline;
+        border-radius: 5px;
+      }
+
+      &.STAFF {
+        border: 2px solid #7bed9f;
+        padding: 2px 4px;
+        display: inline;
+        border-radius: 5px;
+
+        &.SENIOR {
+          border: 2px solid #1abc9c;
+        }
+      }
+      &.DEV {
+        border: 2px solid #ff7979;
+        padding: 2px 4px;
+        display: inline;
+        border-radius: 5px;
+      }
+
+      &.LEGEND {
+        border: 2px solid #4b7bec;
+        padding: 2px 4px;
+        display: inline;
+        border-radius: 5px;
+      }
+      &.HERO {
+        border: 2px solid #fed330;
+        padding: 2px 4px;
+        display: inline;
+        border-radius: 5px;
+      }
+      &.MEDIA {
+        border: 2px solid #a55eea;
+        padding: 2px 4px;
+        display: inline;
+        border-radius: 5px;
+      }
+
+      &.BUILDER {
+        border: 2px solid #ff9ff3;
+        padding: 2px 4px;
+        display: inline;
+        border-radius: 5px;
+      }
+    }
+    h1 {
+      font-size: 24px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .header-container {
+    .player {
+      display: flex;
+    }
+  }
+}

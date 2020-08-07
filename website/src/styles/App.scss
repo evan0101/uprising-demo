@@ -1,0 +1,225 @@
+$purpgray-100: #767682;
+$purpgray-200: #545477;
+$purpgray-300: #2c2c4d;
+$purpgray-400: #1d1d39;
+$purpgray-500: #0d0d20;
+// $purpgray-600: #17172B;
+$purple-50: #e865ff33;
+$purple-100: #e865ff;
+$purple-200: rgb(225, 0, 255);
+$purple-300: #9414ba;
+$purple-400: rgb(127, 0, 255);
+$purple-500: #432a4e;
+
+$danger-100: #ef473a;
+$danger-500: #da383d;
+
+$test: #767682;
+
+$gray: rgba(247, 247, 252, 1);
+$gray-600: rgb(228, 228, 235);
+$gray-700: rgba(217, 217, 217, 1);
+
+$nav-height: 86px;
+$footer-height: 138px;
+
+$iconcard-icon-width: 62px;
+
+$max-content-width: 1080px;
+$content-width: 90%;
+//$desktop: 1250px;
+$desktop: 1072px;
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=auto");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=auto");
+
+a {
+  text-decoration: none;
+}
+
+@import "../components/Nav/nav";
+@import "../components/Header/header";
+@import "gamedata";
+@import "player";
+@import "home";
+@import "leaderboard";
+@import "../components/Footer/footer";
+@import "../components/Card/card";
+@import "../components/IconCard/iconcard";
+@import "../components/Dropdown/dropdown";
+@import "../components/GameCard/gamecard";
+@import "../components/Social/social";
+@import "../components/Pagination/pagination";
+@import "../components/Article/article";
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100vh;
+}
+
+#root {
+  background: $gray;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 100%;
+
+  .content {
+    overflow-y: auto;
+    position: relative;
+    height: 100%;
+    min-height: 100%;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.stat {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  color: $purpgray-100;
+  min-width: 200px;
+
+  h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    color: $purpgray-500;
+  }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  animation: fadein 0.3s;
+
+  svg {
+    animation: spin 2s infinite linear;
+    height: 34px;
+    width: 34px;
+  }
+}
+
+.heading {
+  margin: 18px 0px;
+  white-space: nowrap;
+  h1 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .heading-underline {
+    border: 4px solid $purple-300;
+    width: 58px;
+  }
+}
+
+.logo {
+  height: 48px;
+
+  &.full {
+    height: 92px;
+  }
+}
+
+.content {
+  position: relative;
+  min-height: 100%;
+  height: 100%;
+}
+
+.container {
+  margin: 48px auto 228px auto;
+  width: $content-width;
+  max-width: $max-content-width;
+  min-height: calc(100vh - #{$footer-height} - #{$nav-height});
+}
+
+.copyserverip {
+  background: $purpgray-400;
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+  color: #fff;
+
+  .info {
+    padding: 10px;
+    font-weight: 800;
+    .click-label {
+      font-family: "Roboto", sans-serif;
+      margin-bottom: 4px;
+      font-size: 10px;
+      color: $purpgray-200;
+      text-transform: uppercase;
+    }
+    .ip {
+      font-family: "Roboto", sans-serif;
+      font-size: 15px;
+    }
+  }
+  .copy {
+    display: flex;
+    padding: 2px 15px;
+    align-items: center;
+    background: $purpgray-300;
+    svg {
+      height: 18px;
+      width: 18px;
+    }
+    &:hover {
+      background: $purpgray-200;
+    }
+  }
+}
+
+button {
+  border-radius: 5px;
+  border: none;
+  padding: 8px 12px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  svg {
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+  }
+  &.cta {
+    background: transparent
+      linear-gradient(105deg, #{$purple-400} 0%, #{$purple-200} 100%) 0% 0%
+      no-repeat padding-box;
+  }
+}

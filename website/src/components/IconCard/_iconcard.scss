@@ -1,0 +1,155 @@
+.iconcard {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  margin-bottom: 8px;
+  min-height: 48px;
+  box-sizing: unset;
+  border: 2px solid #fff;
+
+  &.danger {
+    border: 2px solid $danger-500;
+  }
+
+  &.state {
+    border: 2px solid $gray-700;
+  }
+
+  &[id="1"] {
+    border: 2px solid #f2994a;
+  }
+
+  &[id="2"] {
+    border: 2px solid #757f9a;
+  }
+
+  &[id="3"] {
+    border: 2px solid #94716b;
+  }
+
+  .icon {
+    &[id="1"] {
+      background: transparent linear-gradient(314deg, #f2994a 0%, #f2c94c 100%)
+        0% 0% no-repeat padding-box !important;
+    }
+
+    &[id="2"] {
+      background: transparent linear-gradient(314deg, #757f9a 0%, #d7dde8 100%)
+        0% 0% no-repeat padding-box !important;
+    }
+
+    &[id="3"] {
+      background: transparent linear-gradient(314deg, #94716b 0%, #b79891 100%)
+        0% 0% no-repeat padding-box !important;
+    }
+    &.state {
+      background: $gray-700;
+
+      
+    }
+
+    &.danger {
+      background: transparent
+        linear-gradient(134deg, #{$danger-500} 0%, #{$danger-100} 100%) 0% 0%
+        no-repeat padding-box;
+    }
+
+    &.game {
+      background: transparent linear-gradient(133deg, #34ace0 0%, #3462e0 100%)
+        0% 0% no-repeat padding-box;
+    }
+    &.time {
+      background: transparent linear-gradient(133deg, #ff5252 0%, #b52149 100%)
+        0% 0% no-repeat padding-box;
+    }
+
+    &.online {
+      background: transparent linear-gradient(313deg, #12ac9f 0%, #38ef7d 100%)
+        0% 0% no-repeat padding-box;
+    }
+
+    &.unique {
+      background: transparent linear-gradient(133deg, #ffc3a0 0%, #ffafbd 100%)
+        0% 0% no-repeat padding-box;
+    }
+
+    &.totalgames {
+      background: transparent linear-gradient(133deg, #2980b9 0%, #2c3e50 100%)
+        0% 0% no-repeat padding-box;
+    }
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: $iconcard-icon-width;
+    font-size: 24px;
+    font-weight: 700;
+    svg {
+      height: 32px;
+      width: 32px;
+    }
+  }
+
+  .iconcard-content {
+    width: 100%;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    // display: inline-block;
+    &.danger {
+      color: $danger-500;
+    }
+    &.chat {
+      color: $purpgray-100;
+    }
+    &.state {
+      color: $purpgray-100;
+    }
+    &.participant {
+      color: $purpgray-100;
+    }
+    span {
+      display: inline;
+    }
+  }
+  span {
+    margin-right: 8px;
+    font-weight: 700;
+    display: inline;
+  }
+
+  .timestamp {
+    align-self: center;
+    margin-right: 12px;
+    margin-left: auto;
+    background: $gray-600;
+    padding: 4px 0px;
+    font-weight: 300;
+    border-radius: 5px;
+    color: $purpgray-200;
+    min-width: 77px;
+    width: 72px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.ic {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  &.elimination {
+    color: $danger-500;
+  }
+  &.state {
+    color: $purpgray-100;
+  }
+
+  span {
+    font-weight: 700;
+  }
+}

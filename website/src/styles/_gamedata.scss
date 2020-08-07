@@ -1,0 +1,17 @@
+#gamedata {
+  display: flex;
+  flex-direction: column;
+  animation: fadein 0.2s;
+  max-width: 100%;
+}
+
+@media screen and (min-width: $desktop) {
+  #gamedata {
+    flex-direction: row;
+
+    #gamedata-logs {
+      margin-left: 84px;
+      width: 100%;
+    }
+  }
+}

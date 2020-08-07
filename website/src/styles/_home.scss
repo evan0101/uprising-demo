@@ -1,0 +1,29 @@
+#home {
+  display: flex;
+  flex-direction: column;
+
+  .iconcard {
+    min-width: 100%;
+  }
+
+  #news-feed {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  #home {
+    flex-direction: row;
+
+    .iconcard {
+      min-width: 300px;
+    }
+
+    #server {
+      margin-left: 84px;
+      max-width: 350px;
+    }
+  }
+}

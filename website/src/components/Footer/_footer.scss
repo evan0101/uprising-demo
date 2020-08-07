@@ -1,0 +1,39 @@
+#footer-container {
+  height: $footer-height;
+  background: $purpgray-400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  #footer {
+    width: $content-width;
+    max-width: $max-content-width;
+    display: flex;
+    align-items: center;
+
+    #footer-copyright {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+      margin-left: 28px;
+      width: 100%;
+
+      h3 {
+        color: $gray-600;
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+      }
+      h4 {
+        color: $purpgray-100;
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+      }
+    }
+  }
+  .social {
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,16 @@
+.social {
+  display: flex;
+  align-items: center;
+  .social-icon {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  .twitter {
+    color: #1da1f2;
+    height: 24px;
+    width: 24px;
+  }
+}

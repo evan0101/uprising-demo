@@ -1,0 +1,137 @@
+#leaderboard {
+  $playerhead: 64px;
+  $stat-name: 220px;
+  $stat-wins: 100px;
+  $stat-losses: 100px;
+  $stat-deaths: 100px;
+  $stat-kills: 100px;
+  $stat-head_shots: 130px;
+
+  .pagination {
+    margin-top: 24px;
+  }
+
+  .list {
+    max-width: calc(#{$max-content-width} + 24px);
+    overflow-x: auto;
+
+    .iconcard {
+      box-sizing: border-box;
+    }
+    
+    &.survival-games {
+      .iconcard {
+        min-width: calc(
+          120px +  #{$iconcard-icon-width} + 
+          #{$stat-name} + 
+          #{$stat-wins} + 
+          #{$stat-losses} +
+          #{$stat-kills} +
+          #{$stat-head_shots}
+        ) ;
+      }
+    }
+
+    &.kitpvp {
+      .iconcard {
+        min-width: calc(
+          120px +  #{$iconcard-icon-width} + 
+          #{$stat-name} + 
+          #{$stat-kills} +
+          #{$stat-deaths} +
+          #{$stat-head_shots}
+        ) ;
+      }
+    }
+
+    &.skyblock {
+      .iconcard {
+        min-width: calc(
+          120px +  #{$iconcard-icon-width} + 
+          #{$stat-name} + 
+          #{$stat-kills} +
+          #{$stat-deaths} +
+          #{$stat-head_shots}
+        ) ;
+      }
+    }
+
+    
+    
+  
+    .iconcard-content {
+      min-width: 1080px;
+    }
+  }
+
+  .leaderboard-data-container {
+    display: grid;
+   
+
+    &.survival-games {
+      grid-template-areas: "playerhead island name wins losses kills head_shots";
+    }
+
+    &.kitpvp {
+      grid-template-areas: "playerhead island name kills deaths head_shots";
+    }
+
+    &.skyblock {
+      grid-template-areas: "playerhead island name kills deaths head_shots";
+    }
+
+    .leaderboard-stat {
+      display: flex;
+      align-items: center;
+    }
+
+    .uuid {
+      grid-area: $playerhead;
+      width: $playerhead;
+      img {
+        height: 32px;
+        width: 32px;
+      }
+    }
+
+    .name {
+      grid-area: name;
+      width: $stat-name;
+    }
+
+    .wins {
+      grid-area: wins;
+      min-width: $stat-wins;
+      text-align: right;
+      justify-content: flex-end;
+    }
+
+    .losses {
+      grid-area: losses;
+      min-width: $stat-losses;
+      text-align: right;
+      justify-content: flex-end;
+    }
+
+    .deaths {
+      grid-area: deaths;
+      min-width: $stat-deaths;
+      text-align: right;
+      justify-content: flex-end;
+    }
+
+    .kills {
+      grid-area: kills;
+      min-width: $stat-kills;
+      text-align: right;
+      justify-content: flex-end;
+    }
+
+    .head_shots {
+      grid-area: head_shots;
+      min-width: $stat-head_shots;
+      text-align: right;
+      justify-content: flex-end;
+    }
+  }
+}
